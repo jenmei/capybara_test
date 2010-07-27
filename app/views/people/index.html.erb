@@ -1,0 +1,23 @@
+<% content_for :js do %>
+<script type='text/javascript'>
+  $(function() {
+    $('#toggle_color').click(function(e) {
+		  $('div#color').toggleClass('red');
+			return false;
+		});
+  });
+  </script>
+<% end %>
+
+<% content_for :css do %>
+<style type='text/css'>
+div.red {
+  background-color: red;
+}
+</style>
+<% end %>
+<p>This is a <a id="toggle_color" href="#">link that makes things change color</a>.</p>
+
+<div id='color'>
+	This div will turn change color
+</div>

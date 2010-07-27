@@ -1,0 +1,244 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (19.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to People (20100725190914)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100725190914')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;36;1mPerson Create (0.3ms)[0m   [0;1mINSERT INTO "people" ("last_name", "first_name") VALUES(NULL, 'Totoro')[0m
+  [4;35;1mPerson Load (0.2ms)[0m   [0mSELECT * FROM "people" LIMIT 1[0m
+  [4;36;1mPerson Load (0.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Load (0.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 21:38:01) [GET]
+
+SyntaxError (/Users/jenmei/src/test/capybara_test/app/controllers/people_controller.rb:1: syntax error, unexpected tLSHFT, expecting '<' or '\n' or ';'
+class PeopleController << ApplicationController
+                         ^):
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/jenmei/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.1ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:38:11) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 70ms (View: 69, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:38:26) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:44:14) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:44:48) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:45:39) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:46:15) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:46:16) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:46:20) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:46:20) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:46:20) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:46:24) [GET]
+  Parameters: {"1290481204821948"=>nil}
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people?1290481204821948]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:48:26) [GET]
+  Parameters: {"1290481204821948"=>nil}
+Rendering template within layouts/application
+Rendering people/index
+Completed in 36ms (View: 35, DB: 0) | 200 OK [http://localhost/people?1290481204821948]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:48:28) [GET]
+  Parameters: {"12904812048219"=>nil}
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people?12904812048219]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:48:29) [GET]
+  Parameters: {"12904812048219"=>nil}
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people?12904812048219]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:49:49) [GET]
+  Parameters: {"12904812048219"=>nil}
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/people?12904812048219]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:50:12) [GET]
+  Parameters: {"12904812048219"=>nil}
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/people?12904812048219]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 21:51:24) [GET]
+  Parameters: {"12904812048219"=>nil}
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/people?12904812048219]
+  [4;36;1mSQL (19.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100725190914')[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:40:59) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:45:56) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:46:46) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:52:42) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:52:56) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:52:57) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:52:58) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:52:58) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:53:34) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-07-26 22:53:45) [GET]
+Rendering template within layouts/application
+Rendering people/index
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://localhost/people]
