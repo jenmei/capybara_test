@@ -7,11 +7,12 @@ describe "/people" do
   it "should change color of div when link is clicked" do
     page.should have_css('a#toggle_color')
     page.should have_css('div#color')
-    debugger
     page.should_not have_css('div.red')
     click_link('toggle_color')
     page.should have_css('div.red')
     click_link('toggle_color')
-    page.should_not have_css('div.red')
+    page.should have_css('div.green')
+    click_link('toggle_color')
+    page.should have_css('div.blue')
   end
 end

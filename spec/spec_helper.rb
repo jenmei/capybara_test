@@ -7,6 +7,7 @@ require 'spec/rails'
 require 'capybara/rails' 
 require 'capybara/dsl' 
 require 'capybara/envjs'
+Capybara.default_driver = :envjs
 Capybara.javascript_driver = :envjs
 # require "selenium-webdriver"
 

@@ -2,7 +2,19 @@
 <script type='text/javascript'>
   $(function() {
     $('#toggle_color').click(function(e) {
-		  $('div#color').toggleClass('red');
+      var colors = ['red', 'green', 'blue'];
+      var el = $('div#color');
+      if (el.hasClass('red')) {
+        el.removeClass('red');
+        el.addClass('green');
+      } else if (el.hasClass('green')) {
+        el.removeClass('green');
+        el.addClass('blue');
+      } else {
+        el.removeClass('green', 'blue');
+        el.addClass('red');
+      }
+      // $('div#color').toggleClass('red');
 			return false;
 		});
   });
